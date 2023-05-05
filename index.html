@@ -56,23 +56,86 @@
         </section>
         <main id="main" class="overflow-auto">
             <header id="main-heading">
-                <div class="container-fluid">
-                    <div class="row pb-4">
+                                <div class="container-fluid">
+                    <div class="row pb-4"> 
                         <div class="col-12 col-md-4 col-lg-3 pt-4 order-md-last">
                             <p class="d-inline-block me-2 my-0">Nuovo Studente</p>
-                            <button class="btn btn-outline-light align-middle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
-                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                            <div class="offcanvas offcanvas-end text-black" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">                              
                                 <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Inserisci un nuovo studente</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
-                                <div class="offcanvas-body">
-                                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                                <div class="offcanvas-body text-black overflow-auto">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputName" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputSurname" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" id="inputSurname">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEmail" class="form-label">Email</label>
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">@</span>
+                                                <input type="email" class="form-control" aria-label="Email" aria-describedby="addon-wrapping"
+                                                id="inputEmail">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEmailConfirm" class="form-label">Ripeti Email</label>
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">@</span>
+                                                <input type="email" class="form-control" aria-label="Email" aria-describedby="addon-wrapping"
+                                                id="inputEmailConfirm">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPasswordConfirm" class="form-label">Ripeti Password</label>
+                                            <input type="password" class="form-control" id="inputPasswordConfirm">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Indirizzo</label>
+                                            <input type="text" class="form-control" id="inputAddress">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputCity" class="form-label">Città</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputState" class="form-label">Stato</label>
+                                            <select id="inputState" class="form-select">
+                                                <option selected>Scegli...</option>
+                                                <option>Italia</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputZip" class="form-label">CAP</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                    Seleziona per proseguire
+                                                </label>
+                                        </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                            <button type="reset" class="btn btn-warning">Svuota</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-12 col-md-4 col-lg-6 pt-4">
                             <div class="ivy_wrapper">
