@@ -11,12 +11,12 @@
     max-width: 150px;
 }
 
-
 #content{
     height: calc(100vh - 70px);
 }
 
 #sidebar{
+    width: 70px;
     background-color: #051e34;
     background-image: url(../img/sidebar-bg.png);
 }
@@ -29,6 +29,22 @@
     width: 1rem;
 }
 
+#main{
+    width: calc(100vw - 70px);
+}
+
+#main-heading{
+    background-color: #1b72e8;
+}
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 992px) {
     #header .ivy_logo-box{
         width: 150px;
@@ -36,7 +52,10 @@
 
     #sidebar{
         width: 150px;
+    }
 
+    #main{
+        width: calc(100vw - 70px);
     }
     
 }
