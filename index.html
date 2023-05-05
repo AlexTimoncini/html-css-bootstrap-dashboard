@@ -25,7 +25,7 @@
                         <input type="text" class="ivy_searchbar form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Prova a cercare: Lezioni di Laravel">
                     </div>
                 </div>
-                <div>
+                <div class="px-1">
                     <i class="fa-solid fa-list-ul text-secondary px-2 d-none d-lg-inline-block"></i>
                     <i class="fa-solid fa-circle-question text-secondary px-2 d-none d-lg-inline-block"></i>
                     <i class="fa-solid fa-ellipsis-vertical text-secondary px-2 d-none d-lg-inline-block"></i>
@@ -58,11 +58,23 @@
             <header id="main-heading">
                 <div class="container-fluid">
                     <div class="row pb-4">
-                        <div class="col-12 col-md-3 d-flex pt-4 order-md-last">
-                            <p>Nuovo Studente</p>
-                            <button>+</button>
+                        <div class="col-12 col-md-4 col-lg-3 pt-4 order-md-last">
+                            <p class="d-inline-block me-2 my-0">Nuovo Studente</p>
+                            <button class="btn btn-outline-light align-middle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="col-12 col-md-6 pt-4">
+                        <div class="col-12 col-md-4 col-lg-6 pt-4">
                             <div class="ivy_wrapper">
                                 <h1 class="d-inline-block">Boolean</h1>
                                 <span class="badge bg-black bg-opacity-25">Piano blaze</span>
@@ -74,7 +86,7 @@
                             <span class="badge bg-black bg-opacity-25 d-none d-lg-inline-block">Piano blaze</span>
                             <span class="badge bg-black bg-opacity-25 d-none d-lg-inline-block">Piano blaze</span>
                         </div>
-                        <div class="col-12 col-md-3 pt-4">
+                        <div class="col-12 col-md-4 col-lg-3 pt-4">
                             <p>Studenti online negli ultimi 30 minuti</p>
                             <h1>125</h1>
                         </div>
