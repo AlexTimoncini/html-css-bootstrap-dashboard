@@ -12,13 +12,12 @@
 </head>
 <body>
     <header id="header">
-        <div class="container-fluid py-2">
-            <div class="row align-items-center">
+            <div class="d-flex align-items-center">
                 <div class="col ivy_logo-box">
-                    <img src="./img/mobile-logo.png" alt="boolean short logo" class="img-fluid d-block d-lg-none">
-                    <img src="./img/logo.svg" alt="boolean logo" class="img-fluid d-none d-lg-block">
+                    <img src="./img/mobile-logo.png" alt="boolean short logo" class="d-block d-lg-none">
+                    <img src="./img/logo.svg" alt="boolean logo" class="d-none d-lg-block ps-2">
                 </div>
-                <div class="col-9">
+                <div class="col-9 px-3">
                     <div class="input-group input-group-lg">
                         <span class="input-group-text" id="inputGroup-sizing-lg">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -30,16 +29,27 @@
                     <i class="fa-solid fa-bell"></i>
                 </div>
             </div>
-        </div>
     </header>
-    <section class="container-fluid d-flex">
-        <section id="side-bar">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+    <section id="content" class="d-flex text-white">
+        <section id="sidebar" class="d-flex flex-column justify-content-between align-items-center px-4 py-4">
+            <ul class="ivy_sidebar-commands text-center text-lg-start p-0">
+                <li class="pb-2">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="d-none d-lg-inline-block ps-3">Home</span> 
+                </li>
+                <li class="pb-2">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span class="d-none d-lg-inline-block ps-3">Stats</span> 
+                </li>
+                <li>
+                    <i class="fa-solid fa-signal"></i>
+                    <span class="d-none d-lg-inline-block ps-3">Signals</span> 
+                </li>
             </ul>
-            <div class="ivy_settings"></div>
+            <div class="ivy_settings">
+                <i class="fa-solid fa-gear"></i>
+                <span class="d-none d-lg-inline-block ps-3">Admin</span> 
+            </div>
         </section>
         <main>
 

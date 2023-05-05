@@ -1,10 +1,42 @@
+#header{
+    max-height: 70px;
+}
+
 #header .ivy_logo-box{
-    width: 70px;
+    height: 70px;
+}
+
+#header .ivy_logo-box img{
+    height: 70px;
+    max-width: 150px;
+}
+
+
+#content{
+    height: calc(100vh - 70px);
+}
+
+#sidebar{
+    background-color: #051e34;
+    background-image: url(../img/sidebar-bg.png);
+}
+
+.ivy_sidebar-commands{
+    list-style-type: none;
+}
+
+#sidebar i{
+    width: 1rem;
 }
 
 @media screen and (min-width: 992px) {
     #header .ivy_logo-box{
         width: 150px;
+    }
+
+    #sidebar{
+        width: 150px;
+
     }
     
 }
