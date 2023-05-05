@@ -13,20 +13,23 @@
 <body>
     <header id="header">
             <div class="d-flex align-items-center">
-                <div class="col ivy_logo-box">
+                <div class="ivy_logo-box">
                     <img src="./img/mobile-logo.png" alt="boolean short logo" class="d-block d-lg-none">
                     <img src="./img/logo.svg" alt="boolean logo" class="d-none d-lg-block ps-2">
                 </div>
-                <div class="col-9 px-3">
+                <div class="flex-grow-1 px-3">
                     <div class="input-group input-group-lg">
-                        <span class="input-group-text" id="inputGroup-sizing-lg">
+                        <span class="ivy_searchbar input-group-text" id="inputGroup-sizing-lg">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Prova a cercare: Lezioni di Laravel">
+                        <input type="text" class="ivy_searchbar form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Prova a cercare: Lezioni di Laravel">
                     </div>
                 </div>
-                <div class="col">
-                    <i class="fa-solid fa-bell"></i>
+                <div>
+                    <i class="fa-solid fa-list-ul text-secondary px-2 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-circle-question text-secondary px-2 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-ellipsis-vertical text-secondary px-2 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-bell text-warning px-2"></i>
                 </div>
             </div>
     </header>
@@ -55,6 +58,10 @@
             <header id="main-heading">
                 <div class="container-fluid">
                     <div class="row pb-4">
+                        <div class="col-12 col-md-3 d-flex pt-4 order-md-last">
+                            <p>Nuovo Studente</p>
+                            <button>+</button>
+                        </div>
                         <div class="col-12 col-md-6 pt-4">
                             <div class="ivy_wrapper">
                                 <h1 class="d-inline-block">Boolean</h1>
@@ -70,10 +77,6 @@
                         <div class="col-12 col-md-3 pt-4">
                             <p>Studenti online negli ultimi 30 minuti</p>
                             <h1>125</h1>
-                        </div>
-                        <div class="col-12 col-md-3 d-flex pt-4">
-                            <p>Nuovo Studente</p>
-                            <button>+</button>
                         </div>
                     </div>
                 </div>

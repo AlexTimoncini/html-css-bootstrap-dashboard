@@ -11,6 +11,12 @@
     max-width: 150px;
 }
 
+.ivy_searchbar{
+    border: none;
+    background-color: #e9ecef;
+}
+
+
 #content{
     height: calc(100vh - 70px);
 }
