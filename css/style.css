@@ -69,4 +69,7 @@
         width: calc(100vw - 70px);
     }
     
+    .offcanvas.offcanvas-end{
+        width: 50%!important;
+    }
 }
