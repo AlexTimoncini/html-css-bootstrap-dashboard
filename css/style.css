@@ -26,8 +26,10 @@
     background-image: url(../img/sidebar-bg.png);
 }
 
-.ivy_sidebar-commands{
+.ivy_sidebar-commands,
+.ivy_settings{
     list-style-type: none;
+    cursor: pointer;
 }
 
 #sidebar i{
@@ -63,4 +65,9 @@
     .offcanvas.offcanvas-end{
         width: 50%!important;
     }
+
+    .ivy_sidebar-commands > li:hover,
+    .ivy_settings:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
 }
