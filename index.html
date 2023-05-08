@@ -25,11 +25,20 @@
                         <input type="text" class="ivy_searchbar form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Prova a cercare: Lezioni di Laravel">
                     </div>
                 </div>
-                <div class="px-1">
-                    <i class="fa-solid fa-list-ul text-secondary px-2 d-none d-lg-inline-block"></i>
-                    <i class="fa-solid fa-circle-question text-secondary px-2 d-none d-lg-inline-block"></i>
-                    <i class="fa-solid fa-ellipsis-vertical text-secondary px-2 d-none d-lg-inline-block"></i>
-                    <i class="fa-solid fa-bell text-warning px-2"></i>
+                <div class="px-1 d-flex align-items-center">
+                    <i class="fa-solid fa-list-ul text-secondary ps-2 pe-4 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-circle-question text-secondary pe-4 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-ellipsis-vertical text-secondary pe-4 d-none d-lg-inline-block"></i>
+                    <div class="dropdown">
+                        <button class="border-0 bg-transparent p-0 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell text-warning pe-2"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profilo </a></li>
+                            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
     </header>
