@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Boolean Dashboard - Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+            <div class="d-flex align-items-center">
+                <div class="ivy_logo-box">
+                    <img src="./img/mobile-logo.png" alt="boolean short logo" class="d-block d-lg-none">
+                    <img src="./img/logo.svg" alt="boolean logo" class="d-none d-lg-block ps-2">
+                </div>
+                <div class="flex-grow-1 px-3">
+                    <div class="input-group input-group-lg">
+                        <span class="ivy_searchbar input-group-text" id="inputGroup-sizing-lg">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" class="ivy_searchbar form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Prova a cercare: Lezioni di Laravel">
+                    </div>
+                </div>
+                <div class="px-1 d-flex align-items-center">
+                    <i class="fa-solid fa-list-ul text-secondary ps-2 pe-4 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-circle-question text-secondary pe-4 d-none d-lg-inline-block"></i>
+                    <i class="fa-solid fa-ellipsis-vertical text-secondary pe-4 d-none d-lg-inline-block"></i>
+                    <div class="dropdown">
+                        <button class="border-0 bg-transparent p-0 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell text-warning pe-2"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profilo </a></li>
+                            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="content" class="d-flex text-white">
+        <section id="sidebar" class="d-flex flex-column justify-content-between align-items-center px-4 py-4">
+            <ul class="ivy_sidebar-commands text-center text-lg-start p-0">
+                <li class="mb-3">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="index.html" class="d-none d-lg-inline-block ps-3 link-light text-decoration-none">Home</a> 
+                </li>
+                <li class="mb-3">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <a href="stats.html" class="d-none d-lg-inline-block ps-3 link-light text-decoration-none">Stats</a> 
+                </li>
+                <li>
+                    <i class="fa-solid fa-signal"></i>
+                    <a href="#" class="d-none d-lg-inline-block ps-3 link-light text-decoration-none">Signals</a> 
+                </li>
+            </ul>
+            <div class="ivy_settings">
+                <i class="fa-solid fa-gear"></i>
+                <a href="#" class="d-none d-lg-inline-block ps-3 link-light text-decoration-none">Admin</a> 
+            </div>
+        </section>
+        <main id="main" class="overflow-auto">
+            <header id="main-heading">
+                <div class="container-fluid">
+                    <div class="row pb-4"> 
+                        <div class="col-12 col-md-4 col-lg-3 pt-4 order-md-last">
+                            <p class="d-inline-block me-2 my-0">Nuovo Studente</p>
+                            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <div class="offcanvas offcanvas-end text-black w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">                              
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Inserisci un nuovo studente</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body text-black overflow-auto">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputName" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputSurname" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" id="inputSurname">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEmail" class="form-label">Email</label>
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">@</span>
+                                                <input type="email" class="form-control" aria-label="Email" aria-describedby="addon-wrapping"
+                                                id="inputEmail">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputEmailConfirm" class="form-label">Ripeti Email</label>
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">@</span>
+                                                <input type="email" class="form-control" aria-label="Email" aria-describedby="addon-wrapping"
+                                                id="inputEmailConfirm">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPasswordConfirm" class="form-label">Ripeti Password</label>
+                                            <input type="password" class="form-control" id="inputPasswordConfirm">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Indirizzo</label>
+                                            <input type="text" class="form-control" id="inputAddress">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputCity" class="form-label">Città</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputState" class="form-label">Stato</label>
+                                            <select id="inputState" class="form-select">
+                                                <option selected>Scegli...</option>
+                                                <option>Italia</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputZip" class="form-label">CAP</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="formFile" class="form-label">Foto</label>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                    Seleziona per proseguire
+                                                </label>
+                                        </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                            <button type="reset" class="btn btn-warning">Svuota</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-6 pt-4">
+                            <div class="ivy_wrapper">
+                                <h1 class="d-inline-block">Boolean</h1>
+                                <span class="badge bg-black bg-opacity-25">Piano blaze</span>
+                            </div>
+                            <span class="badge bg-black bg-opacity-25">3 app</span>
+                            <i class="fa-solid fa-angles-right fa-xs align-middle"></i>
+                            <span class="badge bg-black bg-opacity-25 d-lg-none">+</span>
+                            <span class="badge bg-black bg-opacity-25 d-none d-lg-inline-block">Boolean mobile app</span>
+                            <span class="badge bg-black bg-opacity-25 d-none d-lg-inline-block">Boolean web app</span>
+                            <span class="badge bg-black bg-opacity-25 d-none d-lg-inline-block">Boolean blog app</span>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3 pt-4">
+                            <p>Studenti online negli ultimi 30 minuti</p>
+                            <h1>125</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section id="main-body">
+                <div class="container-fluid pb-4">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="card mt-3">
+                                <div class="card-header text-black">
+                                    <h2>Utenti Attivi</h2> 
+                                </div>
+                                <ul class="list-group list-group-flush text-dark">
+                                    <li class="row">
+                                        <div class="col-12 col-xl-8">
+                                            <figure>
+                                                <img src="./img/stats.jpeg" alt="" class="img-fluid">
+                                                <figcaption class="text-center">Utenti Attivi nel mese di Aprile</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="col-12 col-xl-4 text-center pb-4">
+                                            <ul class="list-group text-start p-4">
+                                                <li class="list-group-item active" aria-current="true">Aprile: 2100</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Marzo:</a> 1200</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Febbraio:</a> 800</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Gennaio:</a> 1500</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Dicembre:</a> 800</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Novembre:</a> 900</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Ottobre:</a> 1100</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Settembre:</a> 700</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary">Agosto:</a> 800</li>
+                                            </ul>
+                                            <a href="#" class="link-secondary">Visualizza mesi precedenti</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card mt-3">
+                                <div class="card-header text-black">
+                                    <h2>Registro Assenze</h2> 
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <img src="./img/chart_presenze.svg" alt="" class="img-fluid">
+                                </ul>
+                            </div>
+                            <div class="card mt-3">
+                                <div class="card-header text-black">
+                                    <h2>Alunni al limite</h2>                                
+                                </div>
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td>Roberto Savorani</td>
+                                            <td>15 assenze / 25 </td>
+                                            <td><a href="#" class="link-secondary">Contattalo/a</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Giorgia Dal Pane</td>
+                                            <td>38 assenze / 47 </td>
+                                            <td><a href="#" class="link-secondary">Contattalo/a</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ezio Greggio</td>
+                                            <td>18 assenze / 26 </td>
+                                            <td><a href="#" class="link-secondary">Contattalo/a</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+</body>
+</html>
